@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIGestureRecognizerChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-Ln-epR">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.20240107539999999" green="0.31574448109999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hda-dh-jvu" appends="YES" id="Xlq-zO-CCB"/>
+                                    <outletCollection property="gestureRecognizers" destination="TCV-Ok-9zI" appends="YES" id="yfc-Fr-9Xk"/>
+                                    <outletCollection property="gestureRecognizers" destination="cMp-Tg-yPW" appends="YES" id="f6O-A5-6OU"/>
+                                    <outletCollection property="gestureRecognizers" destination="reS-5q-4A9" appends="YES" id="xwR-4E-nqr"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="myView" destination="Bu5-Ln-epR" id="1Zh-qo-g5z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="hda-dh-jvu">
+                    <connections>
+                        <action selector="onViewMoved:" destination="BYZ-38-t0r" id="Vyu-7c-wl9"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="TCV-Ok-9zI">
+                    <connections>
+                        <action selector="onViewPinched:" destination="BYZ-38-t0r" id="11x-Nt-S2C"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="cMp-Tg-yPW">
+                    <connections>
+                        <action selector="onViewTapped:" destination="BYZ-38-t0r" id="HpS-0G-iQp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="reS-5q-4A9">
+                    <connections>
+                        <action selector="onViewSwiped:" destination="BYZ-38-t0r" id="FG0-o9-RON"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="677" y="40"/>
+        </scene>
+    </scenes>
+</document>
